@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "id": "github.noctiluxm5.wife-picker-plus",
+  "name": "今日老婆 Plus",
+  "version": "1.0.2",
+  "description": "群聊「今日老婆」抽取的增强版：在原有随机抽取基础上加入活跃度过滤（自动排除长期潜水的死号）、同群当日去重、近期降权与群规模自适应策略，并支持影子模式观测。基于 whitefox20011120/wife_picker（MIT）改造。",
+  "author": {
+    "name": "NoctiluxM5",
+    "url": "https://github.com/NoctiluxM5"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/NoctiluxM5/maibot-wife-picker-plus",
+    "homepage": "https://github.com/NoctiluxM5/maibot-wife-picker-plus",
+    "documentation": "https://github.com/NoctiluxM5/maibot-wife-picker-plus/blob/main/README.md",
+    "issues": "https://github.com/NoctiluxM5/maibot-wife-picker-plus/issues"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.9.99"
+  },
+  "sdk": {
+    "min_version": "2.0.0",
+    "max_version": "2.9.99"
+  },
+  "dependencies": [
+    {
+      "type": "python_package",
+      "name": "aiohttp",
+      "version_spec": ">=3.9.0"
+    }
+  ],
+  "plugin_type": "game",
+  "capabilities": [
+    "api.call"
+  ],
+  "display": {
+    "icon": {
+      "type": "lucide",
+      "value": "heart"
+    }
+  },
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  }
+}

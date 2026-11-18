@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行时数据（含真实 QQ 号，绝对不要提交）
+data/
+config.toml
+
+# 日志与临时文件
+*.log
+*.tmp
+.DS_Store

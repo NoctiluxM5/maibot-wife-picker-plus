@@ -1,0 +1,43 @@
+[plugin]
+enabled = true
+config_version = "1.0.0"
+
+[wife_picker]
+# —— 原有配置（与上游同名，老配置可直接抄过来） ——
+exclude_self = true
+exclude_sender = true
+bot_qq = ""
+no_limit_users = []            # 不受「每天只能抽一次」限制（一般留空）
+unlimited_divorce_users = []   # 不受「每天只能离婚一次」限制（想反复重抽就填这里）
+tz_offset_hours = 8
+send_avatar = true
+avatar_size = 640
+cooldown_seconds = 60
+persist_enabled = true
+
+# —— 过滤 ——
+exclude_users = []            # 手工黑名单 QQ，永远不抽
+exclude_bots = true           # 成员标记 is_robot 时排除
+min_active_days = 7.0         # 超过 7 天没发言不参与抽取；0 = 关闭
+min_join_days = 0.0           # 入群不足 N 天不参与；0 = 不限制
+
+# —— 抽样 ——
+weight_mode = "uniform"       # uniform = 等概率（推荐）；weighted = 越活跃权重越高
+alpha = 1.0
+max_weight = 2.0
+
+# —— 去重 ——
+unique_per_day_per_group = true
+recent_penalty_days = 3.0
+recent_penalty_factor = 0.3
+
+# —— 分群策略 ——
+small_group_size = 30
+large_group_size = 100
+min_candidates = 3
+member_cache_seconds = 30
+group_overrides = {}          # 例：{ "123456789": { "weight_mode": "weighted" } }
+
+# —— 观测 ——
+shadow_mode = false
+verbose_log = true
